@@ -15,22 +15,14 @@ This is a middleware for consuming the transactions data from the CBS and sendin
 | CBS_ENDPOINT               | The CBS endpoint for querying the customer transactions                                                          |
 
 
-### Step 1: Customer Subscription
+### Step 1: Client Registration API
 
-The customer API > /api/customer/subscription is used to register a customer, by querying the CBS KYC API then on result saves the customer details to the database. 
+The Client Registration API > /api/middleware/access-token is used to register register the middleware the SCORE ENGINE. 
 
-### Step 2: Loan Application
+### Step 2: Transactions API
 
-The loan application API > /api/loan/request is used for customers loan application by:
+The transactions API > /api//middleware/transactions is used by the SCORE ENGINE to retrieve the customers transactions for score calculations
 
- 1. Check if the customer exists in the database, if not the calls KYC API to get the customer details and saves to the database
- 2. Retrieves the customer and checks if they have an existing loan, if not then proceeds to the next step
- 3. Makes a call to the SCORE ENGINE API to get the customer score
- 4. When customer score is returned successfully, the score is validated to determine if the customer is eligible for a loan
- 5. Depending on the score, the customer is either approved or rejected for a loan
 
-### Step 2: Loan Status
-
-The loan status API > /api/loan/status is used to check the status of a loan
 
 
