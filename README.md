@@ -17,7 +17,7 @@ This is a middleware for consuming the transactions data from the CBS and sendin
 
 ### Step 1: Client Registration API
 
-The Client Registration API > /api/middleware/access-token is used to register the middleware to the SCORE ENGINE. This is called by LMS Service via REST when retrieving the CLIENT_TOKEN for customer score querying.
+The Client Registration API > /api/middleware/access-token is used to register the middleware to the SCORE ENGINE and retrieve the ClIENT_TOKEN. This is called by LMS Service via REST when retrieving the CLIENT_TOKEN for customer score querying.
 
 ### Step 2: Transactions API
 
